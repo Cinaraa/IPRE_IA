@@ -1,0 +1,31 @@
+{
+   "prompt":"un heroe que derrota a una dragona"
+}
+
+
+{
+    "storypoint_1": {
+        "title": "La Aldea Afligida",
+        "description": "El pequeño pueblo de Valle Clara vivía aterrorizado por Ignis, una dragona ancestral que exigía tributos diarios: oro, ganado y, en ocasiones, vidas humanas. Su fuego quemaba cosechas y hogares, sumiendo a la aldea en la desesperación."
+    },
+    "storypoint_2": {
+        "title": "El Reto de Aeric",
+        "description": "Aeric, un joven cazador conocido por su valentía y destreza con el arco, decide poner fin al reinado de terror de Ignis. A pesar de las súplicas de su familia y amigos, promete enfrentarse a la dragona y liberar a su pueblo."
+    },
+    "storypoint_3": {
+        "title": "La Búsqueda de la Lanza Olvidada",
+        "description": "Un anciano revela a Aeric la existencia de una lanza mágica, 'Rompeescamas', capaz de penetrar la impenetrable armadura de Ignis. La lanza se encuentra oculta en las ruinas del antiguo reino, custodiada por trampas y bestias salvajes."
+    },
+    "storypoint_4": {
+        "title": "En las Fauces del Peligro",
+        "description": "Aeric se aventura en las ruinas, superando peligrosas pruebas y combatiendo criaturas feroces. Finalmente, encuentra la lanza 'Rompeescamas', sintiendo su poder resonar a través de su cuerpo."
+    },
+    "storypoint_5": {
+        "title": "El Enfrentamiento Final",
+        "description": "Aeric desafía a Ignis a un duelo en la cima de la Montaña del Dragón. La batalla es épica, la dragona escupe fuego y Aeric esquiva las llamaradas valientemente. Finalmente, encuentra una apertura y lanza 'Rompeescamas'."
+    },
+    "storypoint_6": {
+        "title": "La Liberación de Valle Clara",
+        "description": "La lanza atraviesa el corazón de Ignis, quien cae derrotada. Aeric regresa triunfante a Valle Clara, donde es recibido como un héroe y celebran el fin del terror. La lanza 'Rompeescamas' es guardada como un símbolo de esperanza y valentía."
+    }
+}
