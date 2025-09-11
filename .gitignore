@@ -214,7 +214,7 @@ __marimo__/
 
 # frontend
 
-/back/node_modules/
+/back/node_modules
 /back/.next/
 /back/out/
 /back/build/
