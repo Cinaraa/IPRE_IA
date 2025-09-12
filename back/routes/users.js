@@ -19,17 +19,17 @@ router.get("/:id", async (req, res) => {
 
 // POST crear usuario
 router.post("/", async (req, res) => {
-  const { name, email } = req.body;
-  const newUser = await prisma.user.create({ data: { name, email } });
+  const { name, email, password } = req.body;
+  const newUser = await prisma.user.create({ data: { name, email, password } });
   res.json(newUser);
 });
 
 // PUT actualizar usuario
 router.put("/:id", async (req, res) => {
-  const { name, email } = req.body;
+  const { name, email, password } = req.body;
   const updatedUser = await prisma.user.update({
     where: { id: Number(req.params.id) },
-    data: { name, email },
+    data: { name, email, password },
   });
   res.json(updatedUser);
 });

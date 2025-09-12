@@ -17,6 +17,7 @@ model User {
   id          Int          @id @default(autoincrement())
   name        String
   email       String       @unique
+  password    String
   storyboards Storyboard[]
 }
 
@@ -25,6 +26,7 @@ model Storyboard {
   title       String
   prompt      String?
   imageReff   String?
+  length      Int
   userId      Int
   user        User         @relation(fields: [userId], references: [id])
   storypoints Storypoint[]

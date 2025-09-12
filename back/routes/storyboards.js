@@ -1,8 +1,12 @@
-const express = require("express");
-const router = express.Router();
+const express = require('express');
+const { createStoryboard } = require('../controllers/storyboardController');
 const prisma = require("../prisma");
 
-// GET todos los storyboards 
+const router = express.Router();
+
+router.post('/', createStoryboard);
+
+// GET todos los storyboards
 router.get("/", async (req, res) => {
   const storyboards = await prisma.storyboard.findMany();
   res.json(storyboards);
@@ -16,15 +20,6 @@ router.get("/:id", async (req, res) => {
   });
   if (!storyboard) return res.status(404).json({ error: "Storyboard no encontrado" });
   res.json(storyboard);
-});
-
-// POST crear storyboard
-router.post("/", async (req, res) => {
-  const { title, prompt, imageReff, userId } = req.body;
-  const newStoryboard = await prisma.storyboard.create({
-    data: { title, prompt, imageReff, userId },
-  });
-  res.json(newStoryboard);
 });
 
 // PUT actualizar storyboard
