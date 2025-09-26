@@ -40,4 +40,19 @@ router.delete("/:id", async (req, res) => {
   res.json({ message: "Usuario eliminado" });
 });
 
+// LOGIN User
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await prisma.user.findUnique({ where: { email } });
+    if (!user) return res.status(404).json({ error: "Usuario no encontrado" });
+    if (user.password !== password)
+      return res.status(401).json({ error: "Contraseña incorrecta" });
+    res.json({ message: "Login exitoso", user });
+  } catch (error) {
+    res.status(500).json({ error: "Error en el servidor" });
+  } 
+});
+
+
 module.exports = router;

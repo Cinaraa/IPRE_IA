@@ -2,11 +2,14 @@
 // index.js
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require("cors");
 
 dotenv.config();
 
 const app = express();
+app.use(cors()); // <- habilitar CORS
 app.use(express.json()); // <- necesario para leer req.body
+
 
 const userRoutes = require('./routes/users');
 const storyboardRoutes = require('./routes/storyboards');
@@ -23,10 +26,14 @@ app.use('/api/storypoints', storypointRoutes);
 // });
 
 
+app.get('/api/health', (req, res) => {
+
+  res.json({ status: 'OK', message: 'Backend is running' });
+});
 
 
 app.listen(process.env.PORT, () => {
-  console.log("Server is running on port 5000");
+  console.log(`Server is running on port ${process.env.PORT}`);
 });
 
 

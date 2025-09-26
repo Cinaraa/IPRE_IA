@@ -2,6 +2,10 @@
 
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
+import { HealthCheck } from '@/components/health-check'
+
+
+
 
 export function LandingPage() {
   const router = useRouter()
@@ -10,6 +14,13 @@ export function LandingPage() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm">
+        <div>
+          {/* Add this anywhere to test */}
+          <HealthCheck />
+          
+          {/* ...existing code... */}
+        </div>
+      
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-900">Storyboarder IA</h1>
           <div className="flex gap-3">
